@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W2 1BY Rental Tracker | Bayswater, London</title>
+    <title>WC1N 1PY Rental Tracker | Bloomsbury, London</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -100,7 +100,7 @@
         <div class="header-content">
             <div class="logo">
                 <div class="logo-icon">🏠</div>
-                <div><h1>W2 <span>1BY</span> Rental Tracker</h1><div class="logo-subtitle">Bayswater • Paddington • Hyde Park</div></div>
+                <div><h1>WC1N <span>1BY</span> Rental Tracker</h1><div class="logo-subtitle">Bloomsbury • Bloomsbury • Russell Square</div></div>
             </div>
             <div class="header-controls">
                 <div class="last-updated" id="lastUpdated"><i class="far fa-clock"></i> Click refresh</div>
@@ -109,8 +109,8 @@
         </div>
     </header>
     <section class="hero">
-        <h2>London W2 Rentals</h2>
-        <p class="area"><i class="fas fa-map-marker-alt"></i> Bayswater, Paddington & Hyde Park Area</p>
+        <h2>London WC1N Rentals</h2>
+        <p class="area"><i class="fas fa-map-marker-alt"></i> Bloomsbury, Bloomsbury & Russell Square Area</p>
         <p class="description">Real-time rental prices from Rightmove. Track availability, price trends, and find your perfect flat.</p>
     </section>
     <section class="stats-grid">
@@ -146,28 +146,28 @@
         let allProperties = [];
         let charts = {};
         const sampleData = [
-            {id:1,displayAddress:"Queensway, Bayswater, London W2",bedrooms:2,bathrooms:1,price:{amount:3200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-10",addedOrReduced:"Added on 10/03/2026"},
-            {id:2,displayAddress:"Westbourne Terrace, Paddington, W2",bedrooms:1,bathrooms:1,price:{amount:2650},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-12",addedOrReduced:"New"},
-            {id:3,displayAddress:"Craven Hill Gardens, Bayswater, W2",bedrooms:3,bathrooms:2,price:{amount:5500},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-08",addedOrReduced:"Reduced"},
-            {id:4,displayAddress:"Porchester Road, Bayswater, W2",bedrooms:2,bathrooms:1,price:{amount:2900},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-11",addedOrReduced:"Added"},
-            {id:5,displayAddress:"Spring Street, Paddington, W2",bedrooms:0,bathrooms:1,price:{amount:1850},propertyTypeFullDescription:"Studio",firstVisibleDate:"2026-03-13",addedOrReduced:"New"},
-            {id:6,displayAddress:"Devonport Road, Notting Hill, W2",bedrooms:2,bathrooms:2,price:{amount:3800},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-09",addedOrReduced:"Added"},
-            {id:7,displayAddress:"Moscow Road, Bayswater, W2",bedrooms:1,bathrooms:1,price:{amount:2400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-07",addedOrReduced:"Added"},
-            {id:8,displayAddress:"Inverness Terrace, Bayswater, W2",bedrooms:3,bathrooms:2,price:{amount:4500},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-06",addedOrReduced:"Reduced"},
-            {id:9,displayAddress:"Hereford Road, Bayswater, W2",bedrooms:2,bathrooms:1,price:{amount:2750},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-12",addedOrReduced:"Added"},
-            {id:10,displayAddress:"Gloucester Terrace, Paddington, W2",bedrooms:1,bathrooms:1,price:{amount:2200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-14",addedOrReduced:"New"},
-            {id:11,displayAddress:"Kensington Gardens Square, W2",bedrooms:2,bathrooms:1,price:{amount:3400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-05",addedOrReduced:"Added"},
-            {id:12,displayAddress:"St. Mary's Terrace, Paddington, W2",bedrooms:3,bathrooms:2,price:{amount:5200},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-04",addedOrReduced:"Added"}
+            {id:1,displayAddress:"Queensway, Bloomsbury, London WC1N",bedrooms:2,bathrooms:1,price:{amount:3200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-10",addedOrReduced:"Added on 10/03/2026"},
+            {id:2,displayAddress:"Westbourne Terrace, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2650},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-12",addedOrReduced:"New"},
+            {id:3,displayAddress:"Cartwright Gardens, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5500},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-08",addedOrReduced:"Reduced"},
+            {id:4,displayAddress:"Russell Square, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2900},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-11",addedOrReduced:"Added"},
+            {id:5,displayAddress:"Gower Street, Bloomsbury, WC1N",bedrooms:0,bathrooms:1,price:{amount:1850},propertyTypeFullDescription:"Studio",firstVisibleDate:"2026-03-13",addedOrReduced:"New"},
+            {id:6,displayAddress:"Tavistock Place, Bloomsbury, WC1N",bedrooms:2,bathrooms:2,price:{amount:3800},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-09",addedOrReduced:"Added"},
+            {id:7,displayAddress:"Montague Street, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-07",addedOrReduced:"Added"},
+            {id:8,displayAddress:"Corbett Place, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:4500},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-06",addedOrReduced:"Reduced"},
+            {id:9,displayAddress:"Leeds Street, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2750},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-12",addedOrReduced:"Added"},
+            {id:10,displayAddress:"South Crescent, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-14",addedOrReduced:"New"},
+            {id:11,displayAddress:"Woburn Square, WC1N",bedrooms:2,bathrooms:1,price:{amount:3400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-05",addedOrReduced:"Added"},
+            {id:12,displayAddress:"Mecklenburgh Square, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5200},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-04",addedOrReduced:"Added"}
         ];
         async function fetchProperties() {
             const grid = document.getElementById('listingsGrid');
-            grid.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i><br>Fetching W2 properties...</div>';
+            grid.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i><br>Fetching WC1N properties...</div>';
             try {
                 const response = await fetch(`https://${API_HOST}/rent/property-to-rent?identifier=REGION%5E1052&sort_by=HighestPrice&search_radius=3.0`, {method:'GET',headers:{'Content-Type':'application/json','x-rapidapi-host':API_HOST,'x-rapidapi-key':API_KEY}});
                 if(!response.ok) throw new Error('API failed');
                 const data = await response.json();
                 let properties = data.data || [];
-                properties = properties.filter(p => { const a=(p.displayAddress||'').toUpperCase(); return a.includes('W2')||a.includes('NOTTING HILL')||a.includes('PADDINGTON')||a.includes('BAYSWATER')||a.includes('KENSINGTON'); });
+                properties = properties.filter(p => { const a=(p.displayAddress||'').toUpperCase(); return a.includes('WC1N')||a.includes('NOTTING HILL')||a.includes('PADDINGTON')||a.includes('BAYSWATER')||a.includes('KENSINGTON'); });
                 allProperties = properties.length > 3 ? properties : sampleData;
             } catch(e) { console.error(e); allProperties = sampleData; }
             document.getElementById('lastUpdated').innerHTML = '<i class="far fa-clock"></i> Updated: '+new Date().toLocaleTimeString();
@@ -204,7 +204,7 @@
             if(!props.length) { grid.innerHTML='<div class="loading">No properties found</div>'; return; }
             grid.innerHTML = props.slice(0,24).map((p,i)=>{
                 const status = p.addedOrReduced?.toLowerCase().includes('reduced')?'reduced':'available';
-                return `<div class="property-card" style="animation-delay:${i*0.05}s"><div class="property-image"><span class="property-image-icon">🏢</span><div class="property-badges"><span class="property-status ${status}">${p.addedOrReduced||'Available'}</span><span class="property-type-badge">${(p.propertyTypeFullDescription||'Flat').split(' ')[0]}</span></div></div><div class="property-details"><div class="property-address">${p.displayAddress||'W2, London'}</div><div class="property-meta"><span>🛏️ ${p.bedrooms===0?'Studio':p.bedrooms+' Bed'}</span><span>🚿 ${p.bathrooms} Bath</span></div><div class="property-price-row"><div class="property-price">£${(p.price?.amount||0).toLocaleString()}<span>/month</span></div></div><button class="property-btn"><i class="fas fa-external-link-alt"></i> View Details</button></div></div>`;
+                return `<div class="property-card" style="animation-delay:${i*0.05}s"><div class="property-image"><span class="property-image-icon">🏢</span><div class="property-badges"><span class="property-status ${status}">${p.addedOrReduced||'Available'}</span><span class="property-type-badge">${(p.propertyTypeFullDescription||'Flat').split(' ')[0]}</span></div></div><div class="property-details"><div class="property-address">${p.displayAddress||'WC1N, London'}</div><div class="property-meta"><span>🛏️ ${p.bedrooms===0?'Studio':p.bedrooms+' Bed'}</span><span>🚿 ${p.bathrooms} Bath</span></div><div class="property-price-row"><div class="property-price">£${(p.price?.amount||0).toLocaleString()}<span>/month</span></div></div><button class="property-btn"><i class="fas fa-external-link-alt"></i> View Details</button></div></div>`;
             }).join('');
         }
         function renderCharts() {
