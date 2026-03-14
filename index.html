@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WC1N 1PY Rental Tracker | Bloomsbury, London</title>
+    <title>WC1N Rental Tracker | Bloomsbury, London</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -100,7 +100,7 @@
         <div class="header-content">
             <div class="logo">
                 <div class="logo-icon">🏠</div>
-                <div><h1>WC1N <span>1BY</span> Rental Tracker</h1><div class="logo-subtitle">Bloomsbury • Bloomsbury • Russell Square</div></div>
+                <div><h1>WC1N <span>1BY</span> Rental Tracker</h1><div class="logo-subtitle">Bloomsbury • Bloomsbury • Bedford Place, WC1N, WC1N</div></div>
             </div>
             <div class="header-controls">
                 <div class="last-updated" id="lastUpdated"><i class="far fa-clock"></i> Click refresh</div>
@@ -110,7 +110,7 @@
     </header>
     <section class="hero">
         <h2>London WC1N Rentals</h2>
-        <p class="area"><i class="fas fa-map-marker-alt"></i> Bloomsbury, Bloomsbury & Russell Square Area</p>
+        <p class="area"><i class="fas fa-map-marker-alt"></i> Bloomsbury, Bloomsbury & Bedford Place, WC1N, WC1N Area</p>
         <p class="description">Real-time rental prices from Rightmove. Track availability, price trends, and find your perfect flat.</p>
     </section>
     <section class="stats-grid">
@@ -148,16 +148,16 @@
         const sampleData = [
             {id:1,displayAddress:"Queensway, Bloomsbury, London WC1N",bedrooms:2,bathrooms:1,price:{amount:3200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-10",addedOrReduced:"Added on 10/03/2026"},
             {id:2,displayAddress:"Westbourne Terrace, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2650},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-12",addedOrReduced:"New"},
-            {id:3,displayAddress:"Cartwright Gardens, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5500},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-08",addedOrReduced:"Reduced"},
-            {id:4,displayAddress:"Russell Square, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2900},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-11",addedOrReduced:"Added"},
-            {id:5,displayAddress:"Gower Street, Bloomsbury, WC1N",bedrooms:0,bathrooms:1,price:{amount:1850},propertyTypeFullDescription:"Studio",firstVisibleDate:"2026-03-13",addedOrReduced:"New"},
-            {id:6,displayAddress:"Tavistock Place, Bloomsbury, WC1N",bedrooms:2,bathrooms:2,price:{amount:3800},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-09",addedOrReduced:"Added"},
-            {id:7,displayAddress:"Montague Street, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-07",addedOrReduced:"Added"},
-            {id:8,displayAddress:"Corbett Place, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:4500},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-06",addedOrReduced:"Reduced"},
-            {id:9,displayAddress:"Leeds Street, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2750},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-12",addedOrReduced:"Added"},
-            {id:10,displayAddress:"South Crescent, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-14",addedOrReduced:"New"},
-            {id:11,displayAddress:"Woburn Square, WC1N",bedrooms:2,bathrooms:1,price:{amount:3400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-05",addedOrReduced:"Added"},
-            {id:12,displayAddress:"Mecklenburgh Square, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5200},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-04",addedOrReduced:"Added"}
+            {id:3,displayAddress:"Bedford Place, WC1N, WC1N, WC1N, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5500},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-08",addedOrReduced:"Reduced"},
+            {id:4,displayAddress:"Bedford Place, WC1N, WC1N, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2900},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-11",addedOrReduced:"Added"},
+            {id:5,displayAddress:"Bedford Place, WC1N, Bloomsbury, WC1N",bedrooms:0,bathrooms:1,price:{amount:1850},propertyTypeFullDescription:"Studio",firstVisibleDate:"2026-03-13",addedOrReduced:"New"},
+            {id:6,displayAddress:"Montague Place, WC1N, Bloomsbury, WC1N",bedrooms:2,bathrooms:2,price:{amount:3800},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-09",addedOrReduced:"Added"},
+            {id:7,displayAddress:"Tavistock Square, WC1N, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-07",addedOrReduced:"Added"},
+            {id:8,displayAddress:"Queen's Square, WC1N, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:4500},propertyTypeFullDescription:"Apartment",firstVisibleDate:"2026-03-06",addedOrReduced:"Reduced"},
+            {id:9,displayAddress:"Tottenham Court Road, WC1N, Bloomsbury, WC1N",bedrooms:2,bathrooms:1,price:{amount:2750},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-12",addedOrReduced:"Added"},
+            {id:10,displayAddress:"Bloom Street, WC1N, Bloomsbury, WC1N",bedrooms:1,bathrooms:1,price:{amount:2200},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-14",addedOrReduced:"New"},
+            {id:11,displayAddress:"John Street, WC1N, WC1N",bedrooms:2,bathrooms:1,price:{amount:3400},propertyTypeFullDescription:"Flat",firstVisibleDate:"2026-03-05",addedOrReduced:"Added"},
+            {id:12,displayAddress:"Endsleigh Gardens, WC1N, Bloomsbury, WC1N",bedrooms:3,bathrooms:2,price:{amount:5200},propertyTypeFullDescription:"Penthouse",firstVisibleDate:"2026-03-04",addedOrReduced:"Added"}
         ];
         async function fetchProperties() {
             const grid = document.getElementById('listingsGrid');
